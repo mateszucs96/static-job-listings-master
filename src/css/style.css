@@ -30,4 +30,27 @@ body {
   height: 15.6rem;
 }
 
+.filter-box {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 87%;
+  min-height: 7.2rem;
+  padding: 2rem;
+  margin-top: -3.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-box .filter-card {
+  width: 11rem;
+}
+
+.job-card {
+  background-color: red;
+  width: 87%;
+  margin: 5.6rem auto 4rem auto;
+  height: 25rem;
+}
+
 /*# sourceMappingURL=style.css.map */
