@@ -30,20 +30,58 @@ body {
   height: 15.6rem;
 }
 
-.filter-box {
-  background-color: white;
+.filter-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  width: 87%;
-  min-height: 7.2rem;
+  align-items: center;
   padding: 2rem;
+  background-color: white;
+  width: 87%;
+  border-radius: 5px;
+  min-height: 7.2rem;
   margin-top: -3.6rem;
   margin-left: auto;
   margin-right: auto;
 }
+
+.clear-button {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--clr-neutral-500);
+}
+
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
 .filter-box .filter-card {
-  width: 11rem;
+  display: flex;
+  align-items: center;
+  height: 3.2rem;
+  background-color: hsla(180deg, 29%, 50%, 0.103);
+  border-radius: 4px;
+}
+.filter-box .filter-card__title {
+  font-size: 1.6rem;
+  margin: 0.7rem;
+  color: var(--clr-primary-500);
+}
+.filter-box .filter-card .icon-box {
+  background-color: var(--clr-primary-500);
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.filter-box .filter-card .icon-box .remove-icon {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .job-card {
