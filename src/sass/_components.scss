@@ -1,0 +1,74 @@
+.header {
+    background: url('../images/bg-header-mobile.svg') var(--clr-primary-500);
+    height: 15.6rem;
+
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    width: 87%;
+    border-radius: 5px;
+    min-height: 7.2rem;
+    margin-top: -3.6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear-button {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--clr-neutral-500);
+}
+
+
+.filter-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    // padding: 2rem;
+
+    .filter-card {
+        display: flex;
+        align-items: center;
+        height: 3.2rem;
+        background-color: hsla(180, 29%, 50%, 0.103);
+        border-radius: 4px;
+
+        &__title {
+            font-size: 1.6rem;
+            margin: .7rem;
+            color: var(--clr-primary-500);
+        }
+
+        .icon-box {
+            background-color: var(--clr-primary-500);
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3.2rem;
+            width: 3.2rem;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+
+            .remove-icon {
+                width: 1.4rem;
+                height: 1.4rem;
+
+            }
+        }
+    }
+
+}
+
+.job-card {
+    background-color: red;
+    width: 87%;
+    margin: 5.6rem auto 4rem auto;
+    height: 25rem;
+}
