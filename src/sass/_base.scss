@@ -21,7 +21,29 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-300);
     font-family: 'League Spartan', sans-serif;
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: var(--clr-primary-500);
+
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--clr-neutral-700);
+
 }

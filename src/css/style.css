@@ -20,9 +20,29 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-300);
   font-family: "League Spartan", sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: var(--clr-primary-500);
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-700);
 }
 
 .header {
@@ -85,10 +105,80 @@ body {
 }
 
 .job-card {
-  background-color: red;
+  background-color: #ffffff;
+  border-left: var(--clr-primary-500) solid 5px;
+  border-radius: 5px;
   width: 87%;
   margin: 5.6rem auto 4rem auto;
   height: 25rem;
+  padding: 0 2.4rem 2.4rem 2.4rem;
+}
+.job-card .company-logo img {
+  margin-top: -2.4rem;
+  margin-bottom: 0.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.job-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.job-header__heading {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.job-header__heading .new {
+  background-color: var(--clr-primary-500);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem 0.4rem;
+}
+.job-header__heading .featured {
+  background-color: var(--clr-neutral-700);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem 0.4rem;
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #B7C4C4;
+}
+.job-info h3 {
+  font-weight: 500;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+.languages__card {
+  display: flex;
+  align-items: center;
+  background-color: hsla(180deg, 29%, 50%, 0.103);
+  color: var(--clr-primary-500);
+  height: 3.2rem;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  vertical-align: center;
+}
+
+.circle {
+  background-color: #B7C4C4;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 100px;
+}
+
+.line {
+  background-color: #B7C4C4;
+  height: 1px;
+  width: 100%;
+  margin: 1.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
