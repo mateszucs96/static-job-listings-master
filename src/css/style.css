@@ -51,7 +51,7 @@ p {
 }
 
 .filter-container {
-  display: flex;
+  display: none;
   align-items: center;
   padding: 2rem;
   background-color: white;
