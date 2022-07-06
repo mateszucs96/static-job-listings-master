@@ -1,5 +1,6 @@
 export const state = {
     jobs: {},
+    filters: [],
 }
 
 export const fetchURL = async url => {
@@ -11,6 +12,13 @@ export const fetchURL = async url => {
     } catch (err) {
         console.error(err)
     }
-
 }
+
+export const filterKeyWords = keyWord => {
+    if (state.filters.includes(keyWord)) return;
+    state.filters = [...state.filters, keyWord];
+
+    console.log(state.filters);
+}
+
 

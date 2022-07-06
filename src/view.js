@@ -17,8 +17,12 @@ class Job {
 
     };
 
-    renderFilterKeyWords(e) {
-        const text = e.target.textContent.trim();
+    clickedKeyWord(e) {
+        return e.target.textContent.trim();
+    }
+
+    renderFilterKeyWords(text) {
+        this.filterBox.textContent = '';
         const html = `
         <div class="filter-card">
             <h3 class="filter-card__title">${text}</h3>
@@ -49,8 +53,12 @@ class Job {
     }
 
     removeKeyWord(e) {
-        // console.log(e)
+
         e.target.parentElement.parentElement.remove();
+    }
+
+    clear() {
+        this.jobs.textContent = '';
     }
 
     renderJob(data) {
@@ -85,6 +93,7 @@ class Job {
                 </div>
             </div>
     `
+
         this.jobs.insertAdjacentHTML('beforeend', html);
         this.languagesCard = document.querySelectorAll('.languages__card');
 
