@@ -15,12 +15,15 @@ const controlKeyWords = e => {
     model.state.jobs.forEach(el => Job.renderJob(el));
     Job.addHandlerKeyWords(controlKeyWords);
     Job.renderFilter();
+    Job.clearFilter();
     model.state.filters.forEach(el => Job.renderFilterKeyWords(el));
     Job.addHandlerRemove(controlRemove);
 }
 
 const controlRemove = e => {
+    console.log(e)
     Job.removeKeyWord(e);
+    model.removeKeyWord(Job.removeKeyWord(e));
 }
 
 const init = () => {

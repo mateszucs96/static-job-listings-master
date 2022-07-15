@@ -21,4 +21,9 @@ export const filterKeyWords = keyWord => {
     console.log(state.filters);
 }
 
+export const removeKeyWord = keyword => {
+    const index = state.filters.indexOf(keyword);
+    state.filters.splice(index, 1);
+}
+
 

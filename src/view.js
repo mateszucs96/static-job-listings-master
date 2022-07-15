@@ -22,7 +22,7 @@ class Job {
     }
 
     renderFilterKeyWords(text) {
-        this.filterBox.textContent = '';
+
         const html = `
         <div class="filter-card">
             <h3 class="filter-card__title">${text}</h3>
@@ -53,12 +53,19 @@ class Job {
     }
 
     removeKeyWord(e) {
+        console.log(e.target)
+        const clicked = e.target.parentElement.parentElement
 
-        e.target.parentElement.parentElement.remove();
+        clicked.remove();
+        return clicked.textContent.trim();
     }
 
     clear() {
         this.jobs.textContent = '';
+    }
+
+    clearFilter() {
+        this.filterBox.textContent = '';
     }
 
     renderJob(data) {
