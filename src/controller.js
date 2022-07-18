@@ -21,7 +21,6 @@ const controlKeyWords = e => {
 }
 
 const controlRemove = e => {
-    console.log(e)
     Job.removeKeyWord(e);
     model.removeKeyWord(Job.removeKeyWord(e));
 }

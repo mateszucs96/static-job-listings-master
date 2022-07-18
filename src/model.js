@@ -17,8 +17,14 @@ export const fetchURL = async url => {
 export const filterKeyWords = keyWord => {
     if (state.filters.includes(keyWord)) return;
     state.filters = [...state.filters, keyWord];
+    state.jobs.forEach(el => {
+        if (el.languages.includes(keyWord)
+            || el.role === keyWord
+            || el.level === keyWord)
+            console.log(el);
 
-    console.log(state.filters);
+    })
+
 }
 
 export const removeKeyWord = keyword => {
