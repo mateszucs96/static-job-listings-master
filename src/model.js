@@ -1,5 +1,6 @@
 export const state = {
     jobs: {},
+    filteredJobs: '',
     filters: [],
 }
 
@@ -17,14 +18,12 @@ export const fetchURL = async url => {
 export const filterKeyWords = keyWord => {
     if (state.filters.includes(keyWord)) return;
     state.filters = [...state.filters, keyWord];
+    state.filteredJobs = [];
     state.jobs.forEach(el => {
-
         if (state.filters.every(element => [...el.languages, el.role, el.level].includes(element))) {
-            console.log(`${keyWord}`)
-            console.log(el);
+            state.filteredJobs = [...state.filteredJobs, el];
         }
     })
-
 }
 
 export const removeKeyWord = keyword => {

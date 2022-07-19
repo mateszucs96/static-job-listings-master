@@ -12,7 +12,7 @@ const controlJobs = async () => {
 const controlKeyWords = e => {
     Job.clear();
     model.filterKeyWords(Job.clickedKeyWord(e));
-    model.state.jobs.forEach(el => Job.renderJob(el));
+    model.state.filteredJobs.forEach(el => Job.renderJob(el));
     Job.addHandlerKeyWords(controlKeyWords);
     Job.renderFilter();
     Job.clearFilter();
