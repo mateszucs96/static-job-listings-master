@@ -18,11 +18,11 @@ export const filterKeyWords = keyWord => {
     if (state.filters.includes(keyWord)) return;
     state.filters = [...state.filters, keyWord];
     state.jobs.forEach(el => {
-        if (el.languages.includes(keyWord)
-            || el.role === keyWord
-            || el.level === keyWord)
-            console.log(el);
 
+        if (state.filters.every(element => [...el.languages, el.role, el.level].includes(element))) {
+            console.log(`${keyWord}`)
+            console.log(el);
+        }
     })
 
 }
