@@ -1,7 +1,8 @@
 export const state = {
     jobs: {},
-    filteredJobs: '',
+    filteredJobs: [],
     filters: [],
+    filteredJobsCopy: [],
 }
 
 export const fetchURL = async url => {
@@ -20,15 +21,25 @@ export const filterKeyWords = keyWord => {
     state.filters = [...state.filters, keyWord];
     state.filteredJobs = [];
     state.jobs.forEach(el => {
-        if (state.filters.every(element => [...el.languages, el.role, el.level].includes(element))) {
+        if (state.filters.every(element => [...el.languages, ...el.tools, el.role, el.level].includes(element))) {
             state.filteredJobs = [...state.filteredJobs, el];
         }
     })
+
+    console.log(state.filteredJobs)
 }
 
 export const removeKeyWord = keyword => {
     const index = state.filters.indexOf(keyword);
     state.filters.splice(index, 1);
+    console.log(state.filters)
+    state.filteredJobs = [];
+    state.jobs.forEach(el => {
+        if (state.filters.every(element => [...el.languages, ...el.tools, el.role, el.level].includes(element))) {
+            state.filteredJobs = [...state.filteredJobs, el];
+        }
+    })
+    console.log(state.filteredJobs)
 }
 
 

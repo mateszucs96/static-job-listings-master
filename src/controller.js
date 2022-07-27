@@ -21,8 +21,12 @@ const controlKeyWords = e => {
 }
 
 const controlRemove = e => {
-    Job.removeKeyWord(e);
+    // Job.removeKeyWord(e);
+    Job.clear();
     model.removeKeyWord(Job.removeKeyWord(e));
+    model.state.filteredJobs.forEach(el => Job.renderJob(el));
+    Job.addHandlerKeyWords(controlKeyWords);
+
 }
 
 const init = () => {

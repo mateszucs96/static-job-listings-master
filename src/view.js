@@ -8,7 +8,7 @@ class Job {
     removeIcon;
 
     renderKeyWords(data, el) {
-        this.keyWords = [data.role, data.level, ...data.languages];
+        this.keyWords = [data.role, data.level, ...data.languages, ...data.tools];
         return `
         <div class="languages__card">
             <h3 class="title">${el}</h3>
